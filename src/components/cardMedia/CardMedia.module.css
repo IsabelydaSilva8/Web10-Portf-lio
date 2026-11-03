@@ -1,0 +1,48 @@
+
+.card{
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    padding: 16px 26px; 
+    border-radius: 50px; 
+    position: relative;
+    background: linear-gradient(180deg, #4da3ff 0%, #0066cc 100%);
+    box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.6),    /* Reflexo de luz no topo interno */
+        inset 0 -4px 6px rgba(0, 0, 0, 0.3),         /* Sombra interna inferior (profundidade) */
+        0 4px 10px rgba(0, 102, 204, 0.4),           /* Brilho neon/sombra da cor externa */
+        0 8px 16px rgba(0, 0, 0, 0.15);              /* Sombra projetada na mesa (física) */
+
+    /* Transição suave para interações */
+    transition: all 0.2s ease-in-out; /* */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.178), rgba(255, 255, 255, 0));
+  border-radius: 50px 50px 0 0;
+  pointer-events: none;
+}
+
+/* Efeito ao clicar (Active - Simula o clique físico) */
+.card:active {
+  transform: translateY(2px); /* Afunda o botão */
+  box-shadow: 
+    inset 0 4px 8px rgba(0, 0, 0, 0.4),          /* Sombra interna inverte (aplastado) */
+    inset 0 2px 3px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1);                /* Sombra externa quase some */
+}
+
+.card-content{
+    width: 90%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50px;
+}

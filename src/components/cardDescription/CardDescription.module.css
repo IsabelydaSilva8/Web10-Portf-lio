@@ -1,0 +1,24 @@
+
+.card{
+    background: linear-gradient(180deg, #9954ed 0%, #5c22a2 100%);
+    border: none;
+    outline: none;
+    cursor: pointer; 
+    padding: 16px 46px; /* */
+    border-radius: 50px; /* Garante o formato de cápsula real */
+    position: relative;
+    /* O SEGREDO DO REALISMO: Múltiplas sombras combinadas */
+    box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.6),    /* Reflexo de luz no topo interno */
+        inset 0 -4px 6px rgba(0, 0, 0, 0.3),         /* Sombra interna inferior (profundidade) */
+        0 4px 10px rgba(172, 84, 255, 0.4),           /* Brilho neon/sombra da cor externa */
+        0 8px 16px rgba(104, 4, 165, 0.15);              /* Sombra projetada na mesa (física) */
+
+    /* Transição suave para interações */
+    transition: all 0.2s ease-in-out; /* */
+}
+
+
+.card-text{
+    font-size: 1.3rem;
+}

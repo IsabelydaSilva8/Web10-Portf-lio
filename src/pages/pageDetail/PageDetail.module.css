@@ -1,0 +1,19 @@
+
+.full-screen{
+    display: flex;
+    flex-direction: row;
+}
+
+.left-screen{
+    padding: 16px;
+    width: 75%;
+    height: auto;
+    column-count: 2;       /* Define o número de colunas */
+    column-gap: 16px; 
+}
+
+.right-screen{
+    padding: 8px;
+    width: 25%;
+    height: auto;
+}
